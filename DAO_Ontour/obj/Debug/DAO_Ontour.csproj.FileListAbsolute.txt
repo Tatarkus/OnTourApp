@@ -1,0 +1,7 @@
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\bin\Debug\DAO_Ontour.dll
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\bin\Debug\DAO_Ontour.pdb
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\obj\Debug\DAO_Ontour.csprojAssemblyReference.cache
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\obj\Debug\DAO_Ontour.csproj.CoreCompileInputs.cache
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\obj\Debug\DAO_Ontour.dll
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\obj\Debug\DAO_Ontour.pdb
+C:\Users\tarkus\Desktop\Ingenieria_Software\DAO_Ontour\bin\Debug\DAO_Ontour.dll.config

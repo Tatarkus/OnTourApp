@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDF7E667-036B-480C-B6BD-6D78874B9989}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ingenieria_Software</RootNamespace>
+    <AssemblyName>Ingenieria_Software</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControladorUI.cs" />
+    <Compile Include="ControladorEntidades.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\BuscarApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\BuscarApoderado.Designer.cs">
+      <DependentUpon>BuscarApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaAlumnos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaAlumnos.Designer.cs">
+      <DependentUpon>listaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaSeguros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaSeguros.Designer.cs">
+      <DependentUpon>listaSeguros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaViajes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaViajes.Designer.cs">
+      <DependentUpon>listaViajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaNoticias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaNoticias.Designer.cs">
+      <DependentUpon>listaNoticias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaCursos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaCursos.Designer.cs">
+      <DependentUpon>listaCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaContratos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaContratos.Designer.cs">
+      <DependentUpon>listaContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaAportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaAportes.Designer.cs">
+      <DependentUpon>listaAportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaColegios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaColegios.Designer.cs">
+      <DependentUpon>listaColegios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Buzon.cs" />
+    <Compile Include="Entidades\Colegio.cs" />
+    <Compile Include="Entidades\Contrato.cs" />
+    <Compile Include="Entidades\Curso.cs" />
+    <Compile Include="Entidades\Deposito.cs" />
+    <Compile Include="Entidades\EntidadesBD.cs" />
+    <Compile Include="EjecutivoUI\ADministrar_Cliente_Colegio_Ejecutivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\ADministrar_Cliente_Colegio_Ejecutivo.Designer.cs">
+      <DependentUpon>ADministrar_Cliente_Colegio_Ejecutivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Contrato.Designer.cs">
+      <DependentUpon>Administrar_Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Noticia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Noticia.Designer.cs">
+      <DependentUpon>Administrar_Noticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Seguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Seguro.Designer.cs">
+      <DependentUpon>Administrar_Seguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Viaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\Administrar_Viaje.Designer.cs">
+      <DependentUpon>Administrar_Viaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Alumno.cs" />
+    <Compile Include="Entidades\Apoderado.cs" />
+    <Compile Include="EjecutivoUI\Base_de_Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\Base_de_Datos.Designer.cs">
+      <DependentUpon>Base_de_Datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\BClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\BClientes.Designer.cs">
+      <DependentUpon>BClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Alumno.Designer.cs">
+      <DependentUpon>BD_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Apoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Apoderado.Designer.cs">
+      <DependentUpon>BD_Apoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Aporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Aporte.Designer.cs">
+      <DependentUpon>BD_Aporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Colegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Colegio.Designer.cs">
+      <DependentUpon>BD_Colegio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Contratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Contratos.Designer.cs">
+      <DependentUpon>BD_Contratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Curso.Designer.cs">
+      <DependentUpon>BD_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Noticias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Noticias.Designer.cs">
+      <DependentUpon>BD_Noticias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Seguros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Seguros.Designer.cs">
+      <DependentUpon>BD_Seguros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Viajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\BD_Viajes.Designer.cs">
+      <DependentUpon>BD_Viajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaApoderados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\InformacionBD\Listas\listaApoderados.Designer.cs">
+      <DependentUpon>listaApoderados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Alumno.Designer.cs">
+      <DependentUpon>Crear_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Apoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Apoderado.Designer.cs">
+      <DependentUpon>Crear_Apoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Aporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Aporte.Designer.cs">
+      <DependentUpon>Crear_Aporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Colegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Colegio.Designer.cs">
+      <DependentUpon>Crear_Colegio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Comprobante.Designer.cs">
+      <DependentUpon>Crear_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Contrato.Designer.cs">
+      <DependentUpon>Crear_Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Curso.Designer.cs">
+      <DependentUpon>Crear_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Ejecutivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Ejecutivo.Designer.cs">
+      <DependentUpon>Crear_Ejecutivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Noticia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Noticia.Designer.cs">
+      <DependentUpon>Crear_Noticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Seguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Seguro.Designer.cs">
+      <DependentUpon>Crear_Seguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Viaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Crear_Viaje.Designer.cs">
+      <DependentUpon>Crear_Viaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Ejecutivo.cs" />
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Colegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Colegio.Designer.cs">
+      <DependentUpon>Modificar_Colegio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Mensaje.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Alumno.Designer.cs">
+      <DependentUpon>Modificar_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Apoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Apoderado.Designer.cs">
+      <DependentUpon>Modificar_Apoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Aporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Aporte.Designer.cs">
+      <DependentUpon>Modificar_Aporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Comprobante.Designer.cs">
+      <DependentUpon>Modificar_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Contrato.Designer.cs">
+      <DependentUpon>Modificar_Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Curso.Designer.cs">
+      <DependentUpon>Modificar_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Ejecutivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Ejecutivo.Designer.cs">
+      <DependentUpon>Modificar_Ejecutivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Noticia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Noticia.Designer.cs">
+      <DependentUpon>Modificar_Noticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Seguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Seguro.Designer.cs">
+      <DependentUpon>Modificar_Seguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Viaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutivoUI\EntidadesDML\Modificar_Viaje.Designer.cs">
+      <DependentUpon>Modificar_Viaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Noticia.cs" />
+    <Compile Include="Entidades\Noticiero.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recuperar_Contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recuperar_Contraseña.Designer.cs">
+      <DependentUpon>Recuperar_Contraseña.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EjecutivoUI\ADministrar_Cliente_Colegio_Ejecutivo.resx">
+      <DependentUpon>ADministrar_Cliente_Colegio_Ejecutivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\Administrar_Contrato.resx">
+      <DependentUpon>Administrar_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\Administrar_Noticia.resx">
+      <DependentUpon>Administrar_Noticia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\Administrar_Seguro.resx">
+      <DependentUpon>Administrar_Seguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\Administrar_Viaje.resx">
+      <DependentUpon>Administrar_Viaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\Base_de_Datos.resx">
+      <DependentUpon>Base_de_Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\BClientes.resx">
+      <DependentUpon>BClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Alumno.resx">
+      <DependentUpon>BD_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Apoderado.resx">
+      <DependentUpon>BD_Apoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Aporte.resx">
+      <DependentUpon>BD_Aporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Colegio.resx">
+      <DependentUpon>BD_Colegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Contratos.resx">
+      <DependentUpon>BD_Contratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Curso.resx">
+      <DependentUpon>BD_Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Noticias.resx">
+      <DependentUpon>BD_Noticias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Seguros.resx">
+      <DependentUpon>BD_Seguros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\BD_Viajes.resx">
+      <DependentUpon>BD_Viajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\BuscarApoderado.resx">
+      <DependentUpon>BuscarApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaAlumnos.resx">
+      <DependentUpon>listaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaApoderados.resx">
+      <DependentUpon>listaApoderados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Alumno.resx">
+      <DependentUpon>Crear_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Apoderado.resx">
+      <DependentUpon>Crear_Apoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Aporte.resx">
+      <DependentUpon>Crear_Aporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Colegio.resx">
+      <DependentUpon>Crear_Colegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Comprobante.resx">
+      <DependentUpon>Crear_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Contrato.resx">
+      <DependentUpon>Crear_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Curso.resx">
+      <DependentUpon>Crear_Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Ejecutivo.resx">
+      <DependentUpon>Crear_Ejecutivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Noticia.resx">
+      <DependentUpon>Crear_Noticia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Seguro.resx">
+      <DependentUpon>Crear_Seguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Crear_Viaje.resx">
+      <DependentUpon>Crear_Viaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaSeguros.resx">
+      <DependentUpon>listaSeguros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaViajes.resx">
+      <DependentUpon>listaViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaNoticias.resx">
+      <DependentUpon>listaNoticias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaCursos.resx">
+      <DependentUpon>listaCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaContratos.resx">
+      <DependentUpon>listaContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaAportes.resx">
+      <DependentUpon>listaAportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\InformacionBD\Listas\listaColegios.resx">
+      <DependentUpon>listaColegios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Alumno.resx">
+      <DependentUpon>Modificar_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Apoderado.resx">
+      <DependentUpon>Modificar_Apoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Aporte.resx">
+      <DependentUpon>Modificar_Aporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Colegio.resx">
+      <DependentUpon>Modificar_Colegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Comprobante.resx">
+      <DependentUpon>Modificar_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Contrato.resx">
+      <DependentUpon>Modificar_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Curso.resx">
+      <DependentUpon>Modificar_Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Ejecutivo.resx">
+      <DependentUpon>Modificar_Ejecutivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Noticia.resx">
+      <DependentUpon>Modificar_Noticia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Seguro.resx">
+      <DependentUpon>Modificar_Seguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutivoUI\EntidadesDML\Modificar_Viaje.resx">
+      <DependentUpon>Modificar_Viaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Recuperar_Contraseña.resx">
+      <DependentUpon>Recuperar_Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO_Ontour\DAO_Ontour.csproj">
+      <Project>{c6d4c72c-1388-410b-a3c5-f1799d5a95de}</Project>
+      <Name>DAO_Ontour</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

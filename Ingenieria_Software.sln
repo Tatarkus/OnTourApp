@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingenieria_Software", "Ingenieria_Software\Ingenieria_Software.csproj", "{BDF7E667-036B-480C-B6BD-6D78874B9989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO_Ontour", "DAO_Ontour\DAO_Ontour.csproj", "{C6D4C72C-1388-410B-A3C5-F1799D5A95DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDF7E667-036B-480C-B6BD-6D78874B9989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF7E667-036B-480C-B6BD-6D78874B9989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF7E667-036B-480C-B6BD-6D78874B9989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF7E667-036B-480C-B6BD-6D78874B9989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D4C72C-1388-410B-A3C5-F1799D5A95DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D4C72C-1388-410B-A3C5-F1799D5A95DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D4C72C-1388-410B-A3C5-F1799D5A95DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D4C72C-1388-410B-A3C5-F1799D5A95DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C3089CF-7AE6-4416-A196-2298021AC269}
+	EndGlobalSection
+EndGlobal
